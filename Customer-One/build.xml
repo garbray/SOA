@@ -1,0 +1,33 @@
+<project name="Customer-One" default="deploy" basedir=".">
+	
+	<property file="build.properties"/>
+	
+	<target name="init">
+		<delete dir="dist"/>
+		<mkdir dir="dist"/>
+	</target>
+	
+	<target name="jar" depends="init">            
+		<jar jarfile="dist/Customer-One.jar">
+			<fileset dir="bin">
+				<include name="**/**"/>	
+			</fileset>	    
+		</jar>  	
+	</target>
+	
+	<target name="ear" depends="jar">              
+		<ear earfile="dist/Customer-One.ear" appxml="conf/META-INF/application.xml">
+			<fileset dir="dist">
+				<include name="Customer-One.jar"/>
+			</fileset>
+		</ear>        
+	</target>
+	
+	<target name="deploy" depends="ear">
+		<copy todir="${jboss.home}/server/${jboss.server}/deploy" overwrite="true">
+			<fileset dir="dist">
+				<include name="Customer-One.ear"/>
+			</fileset>
+		</copy>   
+	</target>
+</project>

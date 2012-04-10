@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Market xmlns="http://www.unipiloto.edu.co/soa/laboratorioXML/soa/lab-xsd"
+	xmlns:cu="http://www.unipiloto.edu.co/soa/laboratorioXML/soa/lab-xsd">
+	<clientes>
+		<cliente>
+			<nombre>Bryan</nombre>
+			<direccion>kra 23</direccion>
+			<telefono>7181223</telefono>
+			<cuenta>
+				<identificacion>10244</identificacion>
+				<estado>activo</estado>
+				<saldo>234321.0</saldo>
+			</cuenta>
+			<transacciones>
+				<transaccion>
+					<fecha>12 feb</fecha>
+					<numeroFactura>123</numeroFactura>
+					<valorFactura>1200</valorFactura>
+					<valor>1200</valor>
+					<tipo>compra</tipo>
+				</transaccion>
+				<transaccion>
+					<fecha>10 feb</fecha>
+					<numeroFactura>13</numeroFactura>
+					<valorFactura>2200</valorFactura>
+					<valor>2200</valor>
+					<tipo>compra</tipo>
+				</transaccion>
+			</transacciones>
+		</cliente>
+	</clientes>
+	<catalogoPremios>
+		<premio>
+			<codigo>1</codigo>
+			<nombreP>balon</nombreP>
+			<puntosRequeridos>120</puntosRequeridos>
+			<dineroRequerido>0</dineroRequerido>
+		</premio>
+		<premio>
+			<codigo>2</codigo>
+			<nombreP>zapatos</nombreP>
+			<puntosRequeridos>220</puntosRequeridos>
+			<dineroRequerido>0</dineroRequerido>
+		</premio>
+		<premio>
+			<codigo>3</codigo>
+			<nombreP>estufa</nombreP>
+			<puntosRequeridos>320</puntosRequeridos>
+			<dineroRequerido>0</dineroRequerido>
+		</premio>
+		
+	</catalogoPremios>
+</Market>

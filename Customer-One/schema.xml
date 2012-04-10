@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.W3.org/2001/XMLSchema"
+	targetNamespace="http://unipiloto.edu.co/soa/lab-xsd"
+	xmlns="http://www.unipiloto.edu.co/soa/lab-xsd">
+	
+	<xsd:element name="Cliente">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Nombre" type="xsd:String" />
+				<xsd:element name="Direccion" type="xsd:String" />
+				<xsd:element name="Telefono" type="xsd:String" />
+				<xsd:element name="Cuenta">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Estado" type="xsd:string">
+								<xsd:attribute name="Activa" type="xsd:String" use="required"/>
+								<xsd:attribute name="Inactiva" type="xsd:String" use="required"/>
+							</xsd:element>
+							<xsd:element name="Saldo" type="xsd:double" />
+						</xsd:sequence>
+						<xsd:attribute name="numeroTarjetaCF" type="xsd:double" use="required"/>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Transacciones">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Transaccion">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Fecha" type="xsd:date" />
+										<xsd:element name="numeroFactura" type="xsd:double" />
+										<xsd:element name="valorFactura" type="xsd:double" />
+										<xsd:element name="valor" type="xsd:double">
+											<xsd:attribute name="puntosAcumulados" type="xsd:double" use="required"/>
+											<xsd:attribute name="puntosRedimidos" type="xsd:double" use="required"/>
+										</xsd:element>
+										<xsd:element name="Tipo" type="xsd:String">
+											<xsd:attribute name="Credito" type="xsd:double" use="required"/>
+											<xsd:attribute name="Debito" type="xsd:double" use="required"/>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>	
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:attribute name="identificacion" type="xsd:String" use="required"/>
+	</xsd:element>
+	<xsd:element name="CatalogoPremios">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CatalogoPremios">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Codigo" type="xsd:double" />
+							<xsd:element name="Nombre" type="xsd:String" />
+							<xsd:element name="puntosRequeridos" type="xsd:double" />
+							<xsd:element name="dineroRequerido" type="xsd:double" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

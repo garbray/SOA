@@ -10,6 +10,7 @@
 				<identificacion>10244</identificacion>
 				<estado>activo</estado>
 				<saldo>234321.0</saldo>
+				<puntos>100</puntos>
 			</cuenta>
 			<transacciones>
 				<transaccion>
@@ -47,7 +48,6 @@
 			<nombreP>estufa</nombreP>
 			<puntosRequeridos>320</puntosRequeridos>
 			<dineroRequerido>0</dineroRequerido>
-		</premio>
-		
+		</premio>	
 	</catalogoPremios>
 </Market>

@@ -6,10 +6,11 @@
 			<nombre>Bryan</nombre>
 			<direccion>kra 23</direccion>
 			<telefono>7181223</telefono>
+			<puntos>100</puntos>
 			<cuenta>
 				<identificacion>10244</identificacion>
 				<estado>activo</estado>
-				<saldo>200000.0</saldo>
+				<saldo>234100.0</saldo>
 			</cuenta>
 			<transacciones>
 				<transaccion>

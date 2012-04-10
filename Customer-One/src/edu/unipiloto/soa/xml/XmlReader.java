@@ -17,7 +17,6 @@ public class XmlReader {
 		client = new Cliente();
 		acount = new Cuenta();
 		lTransactions = new ListaTransacciones();
-		
 		Lawards = new ListaPremios();
 		
 		try {
@@ -28,12 +27,25 @@ public class XmlReader {
 	        
 	        Document doc = builder.parse(new File("C:\\java\\workspace\\Customer-One\\market.xml"));
 	        Element rootElement = doc.getDocumentElement();
+	        
+	        /*
+	         * queda pendiente para multiples clientes 
+	         * 
+	        NodeList node = rootElement.getElementsByTagName("cliente"); 
+	        for(int i=0;i<node.getLength();i++){
+	        	String cNombre = node.item(i).getChildNodes().item(1).getTextContent();
+	        	String cDireccion = node.item(i).getChildNodes().item(3).getTextContent();
+	        	String cTelefono = node.item(i).getChildNodes().item(5).getTextContent();
+	        }*/
+	        
 	        NodeList node = rootElement.getElementsByTagName("nombre"); 
 	        client.setNombre(node.item(0).getTextContent());
 	        node = rootElement.getElementsByTagName("direccion");
 	        client.setDireccion(node.item(0).getTextContent());
 	        node = rootElement.getElementsByTagName("telefono");
 	        client.setTelefono(node.item(0).getTextContent());
+	        node = rootElement.getElementsByTagName("puntos");
+	        client.setPuntos(node.item(0).getTextContent());
 	        node = rootElement.getElementsByTagName("estado");
 	        acount.setEstado(node.item(0).getTextContent());
 	        node = rootElement.getElementsByTagName("saldo");

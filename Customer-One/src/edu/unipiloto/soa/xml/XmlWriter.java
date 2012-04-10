@@ -32,6 +32,7 @@ public class XmlWriter {
             Element nombre = testDoc.createElement("nombre");
             Element direccion = testDoc.createElement("direccion");
             Element telefono = testDoc.createElement("telefono");
+            Element puntos = testDoc.createElement("puntos");
             Element cuenta = testDoc.createElement("cuenta");
             Element id = testDoc.createElement("identificacion");
             Element estado = testDoc.createElement("estado");
@@ -48,6 +49,7 @@ public class XmlWriter {
             nombre.setTextContent(client.getNombre());
             direccion.setTextContent(client.getDireccion());
             telefono.setTextContent(client.getTelefono());
+            puntos.setTextContent(client.getPuntos());
             id.setTextContent(acount.getId());
             estado.setTextContent(acount.getEstado());
             saldo.setTextContent(acount.getSaldo());
@@ -56,6 +58,7 @@ public class XmlWriter {
             cliente.appendChild(nombre);
             cliente.appendChild(direccion);
             cliente.appendChild(telefono);
+            cliente.appendChild(puntos);
             cliente.appendChild(cuenta);
             
             for(int i=0;i<transactions.numTransacciones();i++){

@@ -8,6 +8,7 @@ public class Cliente {
 	private String direccion;
 	private String telefono;
 	private String cedula;
+	private String puntos;
 	
 	public String getNombre() {
 		return nombre;
@@ -32,6 +33,12 @@ public class Cliente {
 	}
 	public void setCedula(String cedula) {
 		this.cedula = cedula;
+	}
+	public void setPuntos(String puntos) {
+		this.puntos = puntos;
+	}
+	public String getPuntos() {
+		return puntos;
 	}
 
 }
